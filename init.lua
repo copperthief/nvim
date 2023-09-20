@@ -1,4 +1,5 @@
-require "options"
+require "lava.options"
+require "lava.currenttheme"    -- make it so if this doesn't work lua wont crash
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
