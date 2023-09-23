@@ -29,7 +29,9 @@ local plugins = {
       'windwp/nvim-autopairs',
       event = "InsertEnter",
       opts = {} -- this is equalent to setup({}) function
-  }
+  },
+
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }
 
 require("lazy").setup(plugins, opts)
