@@ -23,7 +23,14 @@ local plugins = {
 	{ "bluz71/vim-nightfly-colors", name = "nightfly" },
 	"NLKNguyen/papercolor-theme",
 	"joshdick/onedark.vim",
-	"romainl/Apprentice"
+	"romainl/Apprentice",
+
+  {
+      'windwp/nvim-autopairs',
+      event = "InsertEnter",
+      opts = {} -- this is equalent to setup({}) function
+  }
 }
 
 require("lazy").setup(plugins, opts)
+
