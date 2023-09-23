@@ -14,14 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   
 	-- colorschemes
-	"savq/melange",
-	"ellisonleao/gruvbox.nvim",
-	"shaunsingh/nord.nvim",
-	"rebelot/kanagawa.nvim",
-	{ "bluz71/vim-nightfly-colors", name = "nightfly" },
-	"NLKNguyen/papercolor-theme",
-	"joshdick/onedark.vim",
-	"romainl/Apprentice",
+	{ "savq/melange", priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{ "shaunsingh/nord.nvim", priority = 1000 },
+  { "rebelot/kanagawa.nvim", priority = 1000 },
+	{ "bluz71/vim-nightfly-colors", name = "nightfly", priority = 1000 },
+  { "NLKNguyen/papercolor-theme", priority = 1000 },
+  { "joshdick/onedark.vim", priority = 1000 },
+  { "romainl/Apprentice", priority = 1000 },
 
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
