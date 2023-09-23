@@ -1,6 +1,12 @@
 
 require "lava.plugins"
 require "lava.options"
-require "lava.currenttheme"    -- make it so if this doesn't work lua wont crash
+
+local status_ok, currenttheme = pcall(require, "lava.currenttheme")
+if not status_ok then
+  print("Couldn't set theme")
+  return
+end
+
 
 
