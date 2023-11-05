@@ -22,6 +22,7 @@ local plugins = {
   { "NLKNguyen/papercolor-theme", priority = 1000 },
   { "joshdick/onedark.vim", priority = 1000 },
   { "romainl/Apprentice", priority = 1000 },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
   -- completion
   { "hrsh7th/nvim-cmp" },
@@ -44,7 +45,6 @@ local plugins = {
 
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 
 
 }

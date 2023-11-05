@@ -46,6 +46,12 @@ for key, val in pairs(options) do
         vim.opt[key] = val
 end
 
+opts = { noremap=true, silent=false }
+
+vim.api.nvim_set_keymap('n', 't', 'j', opts)
+vim.api.nvim_set_keymap('n', 'n', 'k', opts)
+vim.api.nvim_set_keymap('n', 's', 'l', opts)
+
 -- send backups to a designated folder so they don't clutter
 -- does this even work? NO fix this later
  -- vim.o.backupdir = "$HOME/.vimbackups//"
