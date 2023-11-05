@@ -23,10 +23,33 @@ local plugins = {
   { "joshdick/onedark.vim", priority = 1000 },
   { "romainl/Apprentice", priority = 1000 },
 
+  -- completion
+  { "hrsh7th/nvim-cmp" },
+  { "hrsh7th/cmp-buffer" },
+  { "hrsh7th/cmp-path" },
+  { "hrsh7th/cmp-cmdline" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-nvim-lua" },
+  { "saadparwaiz1/cmp_luasnip" },
+  
+  -- snippets
+  { "L3MON4D3/LuaSnip" }, --engine
+  { "rafamadriz/friendly-snippets" }, --package
+
+  -- lsp
+  { "neovim/nvim-lspconfig" },
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
+
+
   { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+
 
 }
 
+
 require("lazy").setup(plugins, opts)
+
+require("mason").setup()
